@@ -86,10 +86,12 @@ class FileForm extends Component {
             
 
             uploadTask.on('state_changed', function progress(snapshot) {
-                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+               if(snapshot.totalBytes!=0){
+              var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 console.log(percentage)
                 uploader.value = percentage;
-                
+               }
+            else console.log("taille du fichier=0KB");
            }, function error(err) {
 
 
