@@ -16,14 +16,17 @@ class signIn extends Component {
         }
     }
 
+
     signIn() {
         console.log('this.state', this.state);
         const { email, password } = this.state;
+        localStorage.setItem('newpass',password)
+        localStorage.setItem('newmail',email)
         firebase.auth().signInWithEmailAndPassword(email, password)
             .catch(error => {
                 this.setState({ error })
                 console.log('error signin');
-
+                
             })
 
             .then(function () {
@@ -43,11 +46,17 @@ class signIn extends Component {
 
 
     render() {
+                            console.log('local ',localStorage.getItem('newpass'))
+                var user1 = firebase.auth().currentUser;
+                if(user1){
+                    firebase.auth().signOut().then(function() {console.log("no user here")}).catch(function(error) {console.log("there user here")});
+                    }
+                else{console.log("no user here")}
         return (
             <div>
                 <div id="main" className=" container jumbotron" >
                     <h2>Connectez Vous </h2>
-                    <div className="form-inline">
+                    <div className="form-horizontale">
                         <input className="form-control"
                             type="text"
                             placeholder="Your Mail"
@@ -58,16 +67,19 @@ class signIn extends Component {
                             placeholder="Your Password"
                             onChange={event => this.setState({ password: event.target.value })}
                         />
+                    <div><Link to={'/signup'}>Sign Up instead.</Link>
+
                         <button
                             className="btn btn-primary"
                             type="button"
+                            id="signinbtn"
                             onClick={() => this.signIn()}
                         >
                             Sign In
                 </button>
+                </div>
                     </div>
                     <div>{this.state.error.message}</div>
-                    <div><Link to={'/signup'}>Sign Up instead.</Link></div>
                 </div>
             </div>
 
