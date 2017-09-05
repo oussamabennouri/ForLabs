@@ -64,7 +64,7 @@ const sb = pickTheme => ([
     <Sidebar.Menu.Item icon={{ className: 'fa-envelope' }} title="Gestion des alertes" href="/addAlert" />
     <Sidebar.Menu.Item icon={{ className: 'fa-dashboard' }} title="Historiques des alertes" href="/checkhistory" />
     <Sidebar.Menu.Item icon={{ className: 'fa-pie-chart' }} title="Analytics" href="/analytics"/>
-    <Sidebar.Menu.Item icon={{ className: 'fa-dashboard' }} title="Support" href="" />
+    <Sidebar.Menu.Item icon={{ className: 'fa-dashboard' }} title="Support" href="/help" />
   </Sidebar.Menu>,
 ]);
 
