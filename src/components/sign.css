@@ -1,8 +1,20 @@
 #main{
 margin-top: 6%;
-width: 35%;     
+width: 29%;     
+}
+#signupbtn{
+	float: right;
+
+}
+#signinbtn{
+	float: right;
+	
 }
 
 h2{
     margin-left: 5%;
+}
+#sppbtn{
+	float: right;
+
 }
