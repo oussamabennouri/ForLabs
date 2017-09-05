@@ -19,6 +19,7 @@ import Acceuil from './components/Acceuil';
 import history from './components/history';
 import chart from './components/chart';
 import AlertForm from './components/AlertForm';
+import Support from './components/Support';
 
 const store = createStore(reducer);
 
@@ -84,7 +85,7 @@ ReactDOM.render(
                 <Route path="/addAlert" component={AlertForm} onEnter={requireAuth}/>
                 <Route path="/checkhistory" component={history} onEnter={requireAuth}/>
                 <Route path="/analytics" component={chart} onEnter={requireAuth}/>
-
+                <Route path="/help" component={Support} onEnter={requireAuth}/>
 
             </Route>
         </Router>
