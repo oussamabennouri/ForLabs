@@ -24,12 +24,12 @@ const store = createStore(reducer);
 
 
 var config = {
-    apiKey: "AIzaSyBPqspySydXHPVFLgCEaisrF_gaJKXZWWw",
-    authDomain: "loginapp-ce7fe.firebaseapp.com",
-    databaseURL: "https://loginapp-ce7fe.firebaseio.com",
-    projectId: "loginapp-ce7fe",
-    storageBucket: "loginapp-ce7fe.appspot.com",
-    messagingSenderId: "164604832200"
+    apiKey: "AIzaSyDZfHsjWfKM6Owzi0iTGtFJkhX9UgOAzVY",
+    authDomain: "forlabs-2093e.firebaseapp.com",
+    databaseURL: "https://forlabs-2093e.firebaseio.com",
+    projectId: "forlabs-2093e",
+    storageBucket: "forlabs-2093e.appspot.com",
+    messagingSenderId: "299450065959"
 };
 firebase.initializeApp(config);
 
